@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:orientation="vertical"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent"
+    tools:ignore="NamespaceTypo">
+<LinearLayout
+    app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+    app:orientation="horizontal"
+    app:id="@+id/back_checkout_lllll"
+    app:background="@color/languagecolor"
+    app:layout_width="match_parent"
+    app:layout_height="40dp">
+
+    <ImageView
+        app:id="@+id/back_btn"
+        app:layout_width="wrap_content"
+        app:layout_height="40dp"
+        app:layout_marginLeft="10dp"
+        app:layout_marginRight="10dp"
+        app:adjustViewBounds="true"
+        app:padding="10dp"
+        app:src="@drawable/back"
+        app:tint="#ffffff" />
+
+    <TextView
+        app:id="@+id/page_title_pd"
+        app:layout_width="wrap_content"
+        app:layout_height="match_parent"
+        app:layout_weight="1.0"
+        app:gravity="center_vertical|center_horizontal"
+        app:text="Checkout"
+        app:textColor="#ffffff"
+        app:textSize="18sp"
+        app:textStyle="bold" />
+<ImageView
+    app:id="@+id/cart_img_pd"
+    app:visibility="invisible"
+    app:layout_width="wrap_content"
+    app:layout_height="40dp"
+    app:layout_marginLeft="10dp"
+    app:layout_marginRight="10dp"
+    app:src="@drawable/cart_gray"
+    app:adjustViewBounds="true" />
+</LinearLayout>
+    <RelativeLayout app:layout_width="match_parent" app:layout_height="match_parent">
+        <ScrollView
+            app:id="@+id/scrollView2"
+            app:layout_width="match_parent"
+            app:layout_height="match_parent"
+            app:fillViewport="true">
+
+            <LinearLayout
+                app:layout_width="match_parent"
+                app:layout_height="wrap_content"
+                app:background="#ffffff"
+                app:orientation="vertical">
+
+                <LinearLayout
+                    app:layout_width="match_parent"
+                    app:layout_height="match_parent"
+                    app:layout_marginLeft="15dp"
+                    app:orientation="vertical">
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp">
+
+                        <EditText
+                            app:id="@+id/fname"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="First Name"
+                            app:inputType="textPersonName"
+                            app:paddingLeft="3dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp">
+
+                        <EditText
+                            app:id="@+id/lname"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Last Name"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="20dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp"
+                        >
+
+                        <EditText
+                            app:id="@+id/phone"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:ems="4"
+                            app:hint="Phone"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|number|numberSigned|numberDecimal|numberPassword|phone"
+                            app:paddingLeft="3dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <TextView
+                        app:id="@+id/area"
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="5dp"
+                        app:background="@android:color/transparent"
+                        app:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                        app:hint="Area"
+                        app:paddingLeft="3dp"
+                        app:paddingRight="22dp"
+                        app:textColor="@color/text_color"
+                        app:textColorLink="@color/languagecolor"
+                        app:textSize="14sp" />
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp"
+                       >
+
+                        <EditText
+                            app:id="@+id/block"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Block"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="20dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp"
+                        >
+
+                        <EditText
+                            app:id="@+id/street"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Street"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="20dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp"
+                       >
+
+                        <EditText
+                            app:id="@+id/building"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Building"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="20dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp"
+                        >
+
+                        <EditText
+                            app:id="@+id/flat"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Flat"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="22dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp">
+
+                        <EditText
+                            app:id="@+id/jaddah"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Jaddah"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="20dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        app:layout_width="wrap_content"
+                        app:layout_height="50dp"
+                        app:layout_marginTop="3dp"
+                        >
+
+                        <EditText
+                            app:id="@id/email"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginTop="5dp"
+                            app:background="@android:color/transparent"
+                            app:hint="Email"
+                            app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone|time"
+                            app:paddingLeft="3dp"
+                            app:paddingRight="20dp"
+                            app:textColorLink="@color/languagecolor"
+                            app:textSize="14sp" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="1dp"
+                        app:layout_marginTop="5dp"
+                        app:background="#d2d2d2"
+                        app:orientation="vertical" />
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="match_parent"
+                        app:layout_marginTop="20dp"
+                        app:orientation="vertical">
+
+                        <TextView
+                            app:id="@+id/st_date"
+                            app:layout_width="match_parent"
+                            app:layout_height="match_parent"
+                            app:background="@android:color/transparent"
+                            app:gravity="center_vertical|center_horizontal"
+                            app:text="PLEASE SELECT DELIVERY DATE"
+                            app:textColor="@color/textcolor"
+                            app:textStyle="bold" />
+
+                        <LinearLayout
+                            app:layout_width="200dp"
+                            app:layout_height="match_parent"
+                            app:layout_gravity="center_horizontal"
+                            app:layout_marginTop="10dp">
+
+                            <TextView
+                                app:id="@+id/date"
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:layout_marginBottom="10dp"
+                                app:layout_marginTop="10dp"
+                                app:background="@drawable/date_rectangle"
+                                app:gravity="center_vertical|center_horizontal"
+                                app:hint="Date"
+                                app:padding="10dp"
+                                app:textColor="@color/textcolor" />
+                        </LinearLayout>
+
+                        <TextView
+                            app:id="@+id/st_time"
+                            app:layout_width="match_parent"
+                            app:layout_height="match_parent"
+                            app:layout_marginTop="10dp"
+                            app:gravity="center_vertical|center_horizontal"
+                            app:text="PLEASE SELECT DELIVERY TIME"
+                            app:textColor="@color/textcolor"
+                            app:textStyle="bold" />
+
+                        <LinearLayout
+                            app:layout_width="wrap_content"
+                            app:layout_height="match_parent"
+                            app:layout_gravity="center_horizontal"
+                            app:layout_marginTop="10dp"
+                            app:orientation="horizontal">
+
+                            <LinearLayout
+                                app:id="@+id/now_btn"
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:layout_marginRight="5dp">
+
+                                <ImageView
+                                    app:id="@+id/now_img"
+                                    app:layout_width="30dp"
+                                    app:layout_height="30dp"
+                                    app:adjustViewBounds="true"
+                                    app:src="@drawable/radio_off"
+                                    app:tint="#00aabb" />
+
+                                <TextView
+                                    app:id="@+id/now"
+                                    app:layout_width="match_parent"
+                                    app:layout_height="match_parent"
+                                    app:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                                    app:paddingLeft="10dp"
+                                    app:text="Now"
+                                    app:textColor="@color/text_color" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                app:id="@+id/preorder_btn"
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:paddingLeft="5dp">
+
+                                <ImageView
+                                    app:id="@+id/preorder_img"
+                                    app:layout_width="30dp"
+                                    app:layout_height="30dp"
+                                    app:adjustViewBounds="true"
+                                    app:src="@drawable/radio_off"
+                                    app:tint="#00aabb" />
+
+                                <TextView
+                                    app:id="@+id/preorder"
+                                    app:layout_width="match_parent"
+                                    app:layout_height="match_parent"
+                                    app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                    app:paddingLeft="10dp"
+                                    app:text="Pre-Order"
+                                    app:textColor="@color/text_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            app:layout_width="200dp"
+                            app:layout_height="match_parent"
+                            app:layout_gravity="center_horizontal"
+                            app:layout_marginTop="15dp">
+
+                            <TextView
+                                app:id="@id/time"
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:layout_marginTop="10dp"
+                                app:background="@drawable/date_rectangle"
+                                app:gravity="center_vertical|center_horizontal"
+                                app:hint="Time"
+                                app:padding="10dp"
+                                app:textColor="@color/textcolor" />
+                        </LinearLayout>
+
+                    <LinearLayout
+                        app:layout_width="match_parent"
+                        app:layout_height="match_parent"
+                        app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        app:orientation="vertical"
+                        app:padding="10dp">
+
+                        <TextView
+                            app:id="@+id/st_os"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginBottom="10dp"
+                            app:layout_marginTop="20dp"
+                            app:gravity="center_vertical|center_horizontal"
+                            app:text="ORDER SUMMERY"
+                            app:textStyle="bold" />
+
+                        <LinearLayout
+                            app:layout_width="match_parent"
+                            app:layout_height="1dp"
+                            app:background="@color/languagecolor" />
+
+                        <ListView
+                            app:id="@+id/order_summ"
+                            app:layout_width="match_parent"
+                            app:layout_height="120dp" />
+
+                        <LinearLayout
+                            app:layout_width="match_parent"
+                            app:layout_height="1dp"
+                            app:background="@color/languagecolor" />
+                        />
+
+                        <LinearLayout
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                            app:orientation="vertical">
+
+                            <TextView
+                                app:id="@+id/st_ps"
+                                app:layout_width="match_parent"
+                                app:layout_height="wrap_content"
+                                app:layout_marginBottom="10dp"
+                                app:layout_marginTop="10dp"
+                                app:gravity="center_vertical|center_horizontal"
+                                app:text="PRICE SUMMARY"
+                                app:textStyle="bold" />
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:layout_marginBottom="20dp"
+                                app:layout_marginTop="10dp"
+                                app:orientation="vertical">
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                app:orientation="vertical">
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:orientation="horizontal"
+                                app:paddingLeft="15dp"
+                                app:paddingRight="15dp">
+
+                                <TextView
+                                    app:id="@+id/st_subtotal"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:text="Sub Total" />
+
+                                <TextView
+                                    app:id="@+id/textView26"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:layout_weight="1.0" />
+
+                                <TextView
+                                    app:id="@+id/sub"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:text="KD 21.000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:layout_marginBottom="10dp"
+                                app:layout_marginTop="10dp"
+                                app:orientation="horizontal"
+                                app:paddingLeft="15dp"
+                                app:paddingRight="15dp">
+
+                                <TextView
+                                    app:id="@+id/st_dc"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:text="Delivery Charges" />
+
+                                <TextView
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:layout_weight="1.0" />
+
+                                <TextView
+                                    app:id="@+id/dc"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="1dp"
+                                app:background="#00aabb"
+                                app:orientation="vertical" />
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="match_parent"
+                                app:layout_marginBottom="10dp"
+                                app:layout_marginTop="10dp"
+                                app:orientation="horizontal"
+                                app:paddingLeft="15dp"
+                                app:paddingRight="15dp">
+
+                                <TextView
+                                    app:id="@+id/st_total"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:text="Total"
+                                    app:textColor="#616161"
+                                    app:textSize="16sp"
+                                    app:textStyle="bold" />
+
+                                <TextView
+                                    app:id="@+id/textView31"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:layout_weight="1.0" />
+
+                                <TextView
+                                    app:id="@+id/total"
+                                    app:layout_width="wrap_content"
+                                    app:layout_height="wrap_content"
+                                    app:text="30 KD"
+                                    app:textColor="#616161"
+                                    app:textSize="16sp"
+                                    app:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                app:layout_width="match_parent"
+                                app:layout_height="1dp"
+                                app:background="#00aabb"
+                                app:orientation="vertical" />
+                            />
+
+                                <TextView
+                                    app:id="@+id/st_pm"
+                                    app:layout_width="match_parent"
+                                    app:layout_height="wrap_content"
+                                    app:layout_marginBottom="10dp"
+                                    app:layout_marginTop="20dp"
+                                    app:gravity="center_vertical|center_horizontal"
+                                    app:text="PAYMENT METHOD"
+                                    app:textStyle="bold" />
+
+                                <LinearLayout
+                                    app:id="@+id/payment_option"
+                                    app:layout_width="match_parent"
+                                    app:layout_height="wrap_content"
+                                    app:layout_marginTop="10dp"
+                                    app:orientation="horizontal">
+
+                                    <LinearLayout
+                                        app:id="@+id/tap_ll"
+                                        app:layout_width="match_parent"
+                                        app:layout_height="match_parent"
+                                        app:layout_weight="1.0"
+                                        app:gravity="center_vertical|center_horizontal"
+                                        app:orientation="vertical">
+
+                                        <ImageView
+                                            app:id="@+id/tap_img"
+                                            app:layout_width="wrap_content"
+                                            app:layout_height="30dp"
+                                            app:layout_weight="1.0"
+                                            app:adjustViewBounds="true"
+                                            app:src="@drawable/radio_off"
+                                            app:tint="#00aabb" />
+
+                                        <ImageView
+                                            app:id="@+id/pay_img"
+                                            app:layout_width="wrap_content"
+                                            app:layout_height="wrap_content"
+                                            app:adjustViewBounds="true"
+                                            app:src="@drawable/paymentmethod" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        app:id="@+id/cod_ll"
+                                        app:layout_width="match_parent"
+                                        app:layout_height="match_parent"
+                                        app:layout_weight="1.0"
+                                        app:gravity="center_vertical|center_horizontal"
+                                        app:orientation="vertical">
+
+                                        <ImageView
+                                            app:id="@+id/cod_img"
+                                            app:layout_width="wrap_content"
+                                            app:layout_height="30dp"
+                                            app:adjustViewBounds="true"
+                                            app:src="@drawable/radio_off"
+                                            app:tint="#00aabb" />
+
+                                        <ImageView
+                                            app:id="@+id/imageView20"
+                                            app:layout_width="match_parent"
+                                            app:layout_height="40dp"
+                                            app:layout_marginTop="5dp"
+                                            app:src="@drawable/cod" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        app:id="@+id/place_order"
+                        app:layout_width="match_parent"
+                        app:layout_height="wrap_content"
+                        app:layout_marginBottom="20dp"
+                        app:layout_marginLeft="50dp"
+                        app:layout_marginRight="50dp"
+                        app:layout_marginTop="20dp"
+                        app:background="@drawable/blue_rounded_corners_full"
+                        app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        app:orientation="vertical">
+
+                        <TextView
+                            app:id="@+id/place_order_tvv"
+                            app:layout_width="match_parent"
+                            app:layout_height="wrap_content"
+                            app:layout_marginBottom="10dp"
+                            app:layout_marginLeft="25dp"
+                            app:layout_marginRight="25dp"
+                            app:layout_marginTop="10dp"
+                            app:gravity="center_vertical|center_horizontal"
+                            app:text="CheckOut"
+                            app:textColor="#ffffff"
+                            app:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>
+

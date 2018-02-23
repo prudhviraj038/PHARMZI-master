@@ -62,7 +62,7 @@ public class ProductsListActivity  extends AppCompatActivity {
     TextView sort_text,refine_text,list_text,title_text;
     LinearLayout title_check;
     CheckBox checkbox1,checkbox2,checkbox3,checkbox4;
-    String sorting_option;
+    String sorting_option,phar_id;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -77,6 +77,7 @@ public class ProductsListActivity  extends AppCompatActivity {
         cat_id =  getIntent().getStringExtra("catid");
         title = getIntent().getStringExtra("cat_title");
         title_ar = getIntent().getStringExtra("cat_title_ar");
+        phar_id = getIntent().getStringExtra("phar_id");
         back_btn = (ImageView) findViewById(R.id.back_btn);
         cart = (ImageView) findViewById(R.id.cart);
         cat_title = (TextView) findViewById(R.id.cat_title);
@@ -503,6 +504,7 @@ public class ProductsListActivity  extends AppCompatActivity {
         Ion.with(this)
                 .load(Session.SERVERURL+"products.php")
                 .setBodyParameter("category",cat_id)
+                .setBodyParameter("pharmacy",phar_id)
                 .setBodyParameter("search",text)
                 .setBodyParameter("sorting",sorting_option)
                 .asJsonArray()
@@ -512,6 +514,7 @@ public class ProductsListActivity  extends AppCompatActivity {
                         try {
                             hud.dismiss();
                             Log.e("productsres",result.toString());
+                            Log.e("pharmcy_id",phar_id);
                             for (int i=0;i<result.size();i++) {
                                 Products products = new Products(result.get(i).getAsJsonObject(),ProductsListActivity.this);
                                 productsfrom_api.add(products);

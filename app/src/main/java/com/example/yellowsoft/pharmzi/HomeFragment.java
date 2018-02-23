@@ -82,12 +82,9 @@ public class HomeFragment extends Fragment {
         }
 
         public void onClick(View view) {
-            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
-            if(imm != null){
-                imm.toggleSoftInput(0, InputMethodManager.HIDE_IMPLICIT_ONLY);
-            }
             HomeFragment.this.viewFlipper.setDisplayedChild(3);
             HomeFragment.this.search_pop.setVisibility(View.GONE);
+            getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
             HomeFragment.this.filter.setTextColor(HomeFragment.this.getResources().getColor(R.color.languagecolor));
             HomeFragment.this.filter_image.setColorFilter(HomeFragment.this.getResources().getColor(R.color.languagecolor));
             HomeFragment.this.pharma_btn.setTextColor(HomeFragment.this.getResources().getColor(R.color.text_color));

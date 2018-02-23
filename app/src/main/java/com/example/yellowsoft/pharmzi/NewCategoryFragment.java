@@ -43,14 +43,14 @@ public class NewCategoryFragment extends Fragment  {
             phar_id   = getArguments().getString("id");
             phar_dc = getArguments().getString("dc");
             Session.SetPharmciId(getActivity(),phar_id,phar_dc);
-            Log.e("phar_",phar_dc);
+            Log.e("phar_",phar_id);
         }
         categoriesfrom_api = new ArrayList<>();
         productsfrom_api = new ArrayList<>();
         lhs = new LinkedHashSet<Products>();
 
         listView = (ListView)view.findViewById(R.id.cat_list);
-        adapter = new NewCategoryAdapter(getActivity(),categoriesfrom_api);
+        adapter = new NewCategoryAdapter(getActivity(),categoriesfrom_api,phar_id);
         listView.setAdapter(adapter);
 
 

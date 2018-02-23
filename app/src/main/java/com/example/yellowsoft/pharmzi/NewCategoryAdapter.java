@@ -23,12 +23,14 @@ public class NewCategoryAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
     ArrayList<Categories> categories;
+    String phar_id;
 
 
-    public NewCategoryAdapter(Context context,ArrayList<Categories> categories){
+    public NewCategoryAdapter(Context context,ArrayList<Categories> categories,String phar_id){
         this.context = context;
         this.categories = categories;
         inflater = LayoutInflater.from(context);
+        this.phar_id = phar_id;
     }
     @Override
     public int getCount() {
@@ -68,6 +70,7 @@ public class NewCategoryAdapter extends BaseAdapter {
                 intent.putExtra("catid",categories.get(i).id);
                 intent.putExtra("cat_title",categories.get(i).title);
                 intent.putExtra("cat_title_ar",categories.get(i).title_ar);
+                intent.putExtra("phar_id",phar_id);
 
                 context.startActivity(intent);
             }
@@ -80,6 +83,7 @@ public class NewCategoryAdapter extends BaseAdapter {
                 intent.putExtra("header","1");
                 intent.putExtra("catid",categories.get(i).id);
                 intent.putExtra("cat_title",categories.get(i).title);
+                intent.putExtra("phar_id",phar_id);
                 context.startActivity(intent);
             }
         });

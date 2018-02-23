@@ -28,6 +28,7 @@ public class PharmcyActivity extends Activity {
     ArrayList<Pharmacies> pharmaciesfrom_api;
     Categories categories;
     ImageView back_btn;
+    String phar_id;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class PharmcyActivity extends Activity {
         listView = (ListView) findViewById(R.id.pharmacies);
         pharmaciesfrom_api = new ArrayList<>();
         categories = (Categories) getIntent().getSerializableExtra("cat");
-        adapter = new PharmcyAdapter(PharmcyActivity.this,pharmaciesfrom_api);
+        adapter = new PharmcyAdapter(PharmcyActivity.this,pharmaciesfrom_api,this,categories);
         listView.setAdapter(adapter);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,12 +52,7 @@ public class PharmcyActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent  intent = new Intent(PharmcyActivity.this,ProductsListActivity.class);
-                intent.putExtra("header","0");
-                intent.putExtra("catid",categories.id);
-                intent.putExtra("cat_title",categories.title);
-                intent.putExtra("cat_title_ar",categories.title_ar);
-                startActivity(intent);
+
             }
         });
         get_pharmacies();
@@ -76,6 +72,7 @@ public class PharmcyActivity extends Activity {
                 .show();
         Ion.with(PharmcyActivity.this)
                 .load(Session.SERVERURL+"pharmacies.php")
+                .setBodyParameter("category",categories.id)
                 .asJsonArray()
                 .setCallback(new FutureCallback<JsonArray>() {
                     @Override

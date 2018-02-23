@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CheckBox;
@@ -80,6 +82,10 @@ public class HomeFragment extends Fragment {
         }
 
         public void onClick(View view) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+            if(imm != null){
+                imm.toggleSoftInput(0, InputMethodManager.HIDE_IMPLICIT_ONLY);
+            }
             HomeFragment.this.viewFlipper.setDisplayedChild(3);
             HomeFragment.this.search_pop.setVisibility(View.GONE);
             HomeFragment.this.filter.setTextColor(HomeFragment.this.getResources().getColor(R.color.languagecolor));

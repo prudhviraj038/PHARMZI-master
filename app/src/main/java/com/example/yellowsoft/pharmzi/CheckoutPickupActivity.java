@@ -168,7 +168,7 @@ public class CheckoutPickupActivity extends FragmentActivity implements OnMapRea
         this.back_btn.setOnClickListener(new C03621());
         this.submit_btn.setOnClickListener(new C03632());
         listView = (ListView) findViewById(R.id.order_summ);
-        dc.setText(Session.GetDelivery(this) + " KD ");
+        dc.setText(Session.GetPharmciDc(this) + " KD ");
 
 
         this.st_os = (TextView) findViewById(R.id.st_os);

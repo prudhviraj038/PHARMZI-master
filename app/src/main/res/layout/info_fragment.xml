@@ -44,8 +44,9 @@
 
                                 <TextView
                                     android:id="@+id/st_area"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="Area"
                                     android:textColor="#000" />
 
@@ -83,8 +84,9 @@
 
                                 <TextView
                                     android:id="@+id/st_status"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="Status"
                                     android:textColor="#000" />
 
@@ -203,8 +205,9 @@
 
                                 <TextView
                                     android:id="@+id/st_order_before"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="Order Before"
                                     android:textColor="#000" />
 
@@ -299,7 +302,7 @@
                                     android:layout_weight="1"
                                     android:background="#00000000"
                                     android:inputType="textMultiLine"
-                                    android:paddingLeft="10dp"
+                                    android:paddingLeft="5dp"
                                     android:singleLine="false"
                                     android:text="TextView"
                                     android:textColor="@color/languagecolor"

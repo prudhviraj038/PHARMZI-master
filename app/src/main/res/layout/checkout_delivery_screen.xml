@@ -112,7 +112,6 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:paddingRight="10dp"
-                        android:text="Address book"
                         android:textColor="@color/transparent" />
 
                     <LinearLayout

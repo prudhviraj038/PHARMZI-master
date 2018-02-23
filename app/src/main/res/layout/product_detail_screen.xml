@@ -26,7 +26,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:adjustViewBounds="true"
-                android:padding="10dp"
+                android:padding="13dp"
                 android:src="@drawable/back" />
 
             <TextView
@@ -43,13 +43,16 @@
             <RelativeLayout
                 android:id="@+id/cart_ll"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp">
 
                 <ImageView
                     android:id="@+id/cart_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:adjustViewBounds="true"
+                    android:padding="10dp"
                     android:src="@drawable/cart_gray" />
 
 
@@ -797,7 +800,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/rectangle"
                         android:orientation="horizontal">
@@ -842,7 +845,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
                         android:layout_weight="1"
                         android:background="#11BBB2"
                         android:orientation="vertical">

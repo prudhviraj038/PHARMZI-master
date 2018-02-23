@@ -240,6 +240,9 @@ public class CheckoutDeliveryActivity extends Activity {
         this.area_name.setText(Session.GetAreaTitle(this));
         this.buil_area.setText(Session.GetAreaTitle(this));
         this.hosp_area.setText(Session.GetAreaTitle(this));
+
+        savedaddress_btn.setHint("Address book");
+        savedaddress_btn.setTextColor(getResources().getColor(R.color.textcolor));
 //        area_name.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {

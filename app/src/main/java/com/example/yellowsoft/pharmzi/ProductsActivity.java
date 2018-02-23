@@ -28,6 +28,7 @@ public class ProductsActivity extends FragmentActivity {
     TextView title,payment_title,time,minimum,products_btn,location_btn,info_btn,phar_title;
     TextView st_pay,st_avg,st_min,st_delivery;
     FrameLayout frame;
+    TextView delivery;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -48,6 +49,7 @@ public class ProductsActivity extends FragmentActivity {
         st_avg = (TextView) findViewById(R.id.st_avg);
         st_min = (TextView) findViewById(R.id.st_min);
         st_delivery = (TextView) findViewById(R.id.st_delivery);
+        delivery = (TextView) findViewById(R.id.delivery);
 
         st_pay.setText(Session.GetWord(this,"Pay by"));
         st_avg.setText(Session.GetWord(this,"Avg"));
@@ -82,6 +84,7 @@ public class ProductsActivity extends FragmentActivity {
         payment_title.setText(pharmcies.payments.get(0).title);
         time.setText(pharmcies.time);
         minimum.setText(pharmcies.minimum);
+        delivery.setText(pharmcies.delivery_charges + " KD ");
 
 
         products_btn.setBackground(getResources().getDrawable(R.drawable.underline));

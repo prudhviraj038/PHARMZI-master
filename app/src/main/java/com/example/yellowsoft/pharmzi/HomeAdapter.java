@@ -26,6 +26,7 @@ public class HomeAdapter extends BaseAdapter implements Filterable{
     PlanetFilter planetFilter;
     ArrayList<Pharmacies> pharmacies;
     ArrayList<Pharmacies> pharmacies_all;
+    String delivery_charge;
 
     public HomeAdapter(Context context,ArrayList<Pharmacies> pharmacies){
         this.context = context;
@@ -63,6 +64,7 @@ public class HomeAdapter extends BaseAdapter implements Filterable{
         TextView payment_title= (TextView) item_view.findViewById(R.id.payment_title);
         TextView time = (TextView) item_view.findViewById(R.id.time);
         TextView minimum = (TextView) item_view.findViewById(R.id.minimum);
+        TextView delivery = (TextView) item_view.findViewById(R.id.delivery);
         TextView st_pay = (TextView) item_view.findViewById(R.id.st_pay);
         TextView st_avg = (TextView) item_view.findViewById(R.id.st_avg);
         TextView st_min = (TextView) item_view.findViewById(R.id.st_min);
@@ -81,6 +83,9 @@ public class HomeAdapter extends BaseAdapter implements Filterable{
         payment_title.setText(pharmacies.get(position).payments.get(0).title);
         time.setText(pharmacies.get(position).time);
         minimum.setText(pharmacies.get(position).minimum);
+        delivery_charge = pharmacies.get(position).delivery_charges;
+        Session.SetPharmciId(context,pharmacies.get(position).id,delivery_charge);
+        delivery.setText(delivery_charge + " KD ");
         return item_view;
     }
 

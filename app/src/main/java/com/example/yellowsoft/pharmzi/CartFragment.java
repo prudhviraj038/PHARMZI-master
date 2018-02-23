@@ -208,8 +208,9 @@ public class CartFragment extends Fragment {
             productsfrom_api.add(products);
             Log.e("_price",products.price);
             total_cart_price = total_cart_price + (products.cart_quantity * Float.parseFloat(products.price));
-            dc.setText(((Pharmacies) ((Products) this.productsfrom_api.get(i)).pharmacies.get(0)).delivery_charges + " KD ");
-            delivery_charge = Float.valueOf(Float.parseFloat(((Pharmacies) ((Products) this.productsfrom_api.get(i)).pharmacies.get(0)).delivery_charges));
+            dc.setText(Session.GetPharmciDc(getActivity()) + " KD ");
+            Log.e("delivery_charge",Session.GetPharmciDc(getActivity()));
+            delivery_charge = Float.valueOf(Float.parseFloat(Session.GetPharmciDc(getActivity())));
 //            sp = String.valueOf(Float.parseFloat(products.shipping_price));
 
 

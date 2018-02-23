@@ -119,7 +119,7 @@ public class Session {
     }
 
     public static String GetPharmciDc(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getString(p_dc, "0");
+        return PreferenceManager.getDefaultSharedPreferences(context).getString(p_dc, "-1");
     }
 
     public static void SetCartPharmciId(Context context, String id) {

@@ -70,7 +70,8 @@
                         android:id="@+id/st_pay"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Pay by:" />
+                        android:text="Pay by:"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/payment_title"
@@ -78,7 +79,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="Paypal, Cash" />
+                        android:text="Paypal, Cash"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -98,7 +100,8 @@
                         android:id="@+id/st_avg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Avg:" />
+                        android:text="Avg:"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/time"
@@ -106,7 +109,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="50 mins" />
+                        android:text="50 mins"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -123,7 +127,8 @@
                         android:id="@+id/st_min"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Min:" />
+                        android:text="Min:"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/minimum"
@@ -131,7 +136,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="50.00" />
+                        android:text="50.00"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -152,15 +158,17 @@
                         android:id="@+id/st_delivery"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Delivery:" />
+                        android:text="Delivery:"
+                        android:textSize="12sp" />
 
                     <TextView
-                        android:id="@+id/hours"
+                        android:id="@+id/delivery"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
                         android:paddingRight="10dp"
-                        android:text="5.00" />
+                        android:text="5.00"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
 

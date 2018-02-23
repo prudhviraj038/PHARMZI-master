@@ -158,10 +158,10 @@ public class CheckoutPickupActivity extends FragmentActivity implements OnMapRea
         this.dc = (TextView) findViewById(R.id.dc);
         this.total = (TextView) findViewById(R.id.total);
         this.submit_btn = (TextView) findViewById(R.id.submit_btn);
-        this.pro_title = (TextView) findViewById(R.id.pro_title);
+       // this.pro_title = (TextView) findViewById(R.id.pro_title);
         this.area_option = (TextView) findViewById(R.id.area_option);
         this.area_option.setText(Session.GetAreaTitle(this));
-        this.pro_title.setText(Session.GetProductTitle(this));
+//        this.pro_title.setText(Session.GetProductTitle(this));
         this.sub.setText(main_total + " KD ");
         delivery_charge = Session.GetDelivery(this);
         this.total.setText(this.main_total+ delivery_charge + " KD ");

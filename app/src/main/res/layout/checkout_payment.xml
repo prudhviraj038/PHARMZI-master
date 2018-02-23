@@ -119,7 +119,15 @@
                 android:text="Apply"
                 android:textColor="#ffffff" />
         </LinearLayout>
-        <LinearLayout android:orientation="horizontal" android:id="@+id/discount" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_below="@+id/coupon">
+
+        <LinearLayout
+            android:id="@+id/discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coupon"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <TextView
                 android:id="@+id/st_dp"
@@ -131,7 +139,21 @@
                 android:paddingRight="10dp"
                 android:text="Discount"
                 android:textSize="14sp" />
-            <TextView android:textColor="#000" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/discount_value" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1.0" android:layout_below="@+id/coupon" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/discount_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coupon"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical|end"
+                android:textColor="#000" />
         </LinearLayout>
         <LinearLayout android:orientation="horizontal" android:id="@+id/sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_below="@+id/discount">
 
@@ -139,13 +161,27 @@
                 android:id="@+id/st_subtotal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                android:gravity="center_vertical"
                 android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="Subtotal"
                 android:textSize="14sp" />
-            <TextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/subtotal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1.0" android:layout_below="@+id/coupon" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/coupon"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#000" />
         </LinearLayout>
         <LinearLayout android:orientation="horizontal" android:id="@+id/dc1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_below="@+id/sub">
 
@@ -160,24 +196,62 @@
                 android:singleLine="true"
                 android:text="Delivery Charges (Arya)"
                 android:textSize="14sp" />
-            <TextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/delivery_charge" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/delivery_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#000" />
         </LinearLayout>
-        <LinearLayout android:orientation="horizontal" android:id="@+id/dc2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_below="@+id/dc1">
+
+        <LinearLayout
+            android:id="@+id/dc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dc1"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/textView25"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
                 android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="Delivery Charges(All About Flora)"
                 android:textSize="14sp" />
-            <TextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/delivery_charge_2" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/delivery_charge_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" />
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@+id/line" android:background="#d2d2d2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/dc2" />
-        <LinearLayout android:orientation="horizontal" android:id="@+id/total" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="10dp" android:layout_below="@+id/line">
+
+        <LinearLayout
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/st_ot"
@@ -190,7 +264,19 @@
                 android:text="Order total"
                 android:textColor="#000"
                 android:textSize="14sp" />
-            <TextView android:textColor="#000" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/total_order" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/total_order"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:textColor="#000" />
         </LinearLayout>
 
         <TextView
@@ -231,7 +317,7 @@
         <TextView
             android:id="@+id/submit_btn"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_alignParentLeft="false"
             android:layout_alignParentStart="false"
             android:layout_below="@+id/payment_btn"

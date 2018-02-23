@@ -48,4 +48,6 @@ public class ExampleActivity extends Activity {
             finish();
         }
     }
+
+
 }

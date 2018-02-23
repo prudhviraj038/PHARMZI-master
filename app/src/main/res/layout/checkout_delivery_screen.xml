@@ -728,13 +728,14 @@
                                     android:layout_height="1dp"
                                     android:background="#d2d2d2" />
 
+
                                 <TextView
                                     android:id="@+id/buil_save_btn"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_margin="10dp"
                                     android:background="@color/languagecolor"
-                                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                    android:gravity="center_vertical|center_horizontal"
                                     android:padding="10dp"
                                     android:text="Save and proceed"
                                     android:textColor="#ffffff" />
@@ -994,13 +995,14 @@
                                     android:layout_height="1dp"
                                     android:background="#d2d2d2" />
 
+
                                 <TextView
                                     android:id="@+id/hosp_save_btn"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_margin="10dp"
                                     android:background="@color/languagecolor"
-                                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                    android:gravity="center_vertical|center_horizontal"
                                     android:padding="10dp"
                                     android:text="Save and proceed"
                                     android:textColor="#ffffff" />

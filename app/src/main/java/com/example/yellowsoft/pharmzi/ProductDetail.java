@@ -113,6 +113,7 @@ public class ProductDetail extends Activity {
                 Products products = ProductDetail.this.products;
                 products.cart_quantity++;
                 ProductDetail.this.quantity.setText(String.valueOf(ProductDetail.this.products.cart_quantity));
+                calculate_total_price();
             }
         }
     }
@@ -126,6 +127,7 @@ public class ProductDetail extends Activity {
                 Products products = ProductDetail.this.products;
                 products.cart_quantity--;
                 ProductDetail.this.quantity.setText(String.valueOf(ProductDetail.this.products.cart_quantity));
+                calculate_total_price();
             }
         }
     }
@@ -314,5 +316,14 @@ public class ProductDetail extends Activity {
                 }
             }
         });
+    }
+
+    public void calculate_total_price(){
+
+        total_cart_price = 0.0f;
+        for (int i=0;i<pro.size();i++){
+            total_cart_price = total_cart_price + (pro.get(i).cart_quantity* Float.parseFloat(pro.get(i).price));
+        }
+        product_price.setText(String.valueOf(total_cart_price)+"KD");
     }
 }

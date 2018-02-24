@@ -45,6 +45,7 @@ public class CartFragment extends Fragment {
     int previous_postion=0;
     Float delivery_charge;
     TextView st_total,st_subtotal,st_delivery_charges,st_text;
+    LinearLayout continue_shopping_ll;
 
     public static CartFragment newInstance(String someInt) {
         CartFragment myFragment = new CartFragment();
@@ -88,6 +89,7 @@ public class CartFragment extends Fragment {
         st_delivery_charges = (TextView) view.findViewById(R.id.st_delivery_charges);
         st_subtotal = (TextView) view.findViewById(R.id.st_subtotal);
         st_text = (TextView) view.findViewById(R.id.st_text);
+        continue_shopping_ll = (LinearLayout) view.findViewById(R.id.continue_shopping_ll);
         check_out_lll = (LinearLayout) view.findViewById(R.id.check_out_lll);
         cartAdapter = new CartAdapter(getActivity(),productsfrom_api,this);
         recyclerView.setAdapter(cartAdapter);
@@ -113,6 +115,18 @@ public class CartFragment extends Fragment {
                         checkout1();
                     }
                 }
+            }
+        });
+
+        continue_shopping_ll.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                intent.putExtra("act", "0");
+                intent.putExtra("id", Session.GetAreaId(getContext()));
+                intent.putExtra(Session.delivery, "0");
+                Session.SetDelivery(getContext(), Session.delivery);
+                startActivity(intent);
             }
         });
 

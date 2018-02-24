@@ -145,7 +145,8 @@
                                 android:layout_height="40dp"
                                 android:layout_alignParentBottom="true"
                                 android:gravity="center"
-                                android:orientation="horizontal">
+                                android:orientation="horizontal"
+                                android:visibility="gone">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -154,7 +155,6 @@
                                     android:orientation="vertical"></LinearLayout>
 
                                 <ImageView
-                                    android:id="@+id/share_btn"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:adjustViewBounds="true"
@@ -176,16 +176,16 @@
                                     android:orientation="vertical"></LinearLayout>
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#d2d2d2"></LinearLayout>
+
                         </RelativeLayout>
 
                     </LinearLayout>
                 </RelativeLayout>
 
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#d2d2d2"></LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/main_layout"
@@ -233,6 +233,14 @@
                                 android:textStyle="bold" />
 
                         </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/share_btn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/share" />
 
                         <LinearLayout
                             android:id="@+id/schedule"
